@@ -1,46 +1,62 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
-  entry: './task_1/index.js',
+  mode: 'production', 
+  entry: './src/index.js', 
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'task_2/public')
+    path: path.resolve(__dirname, 'dist'), 
   },
-  
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'], // Applies style-loader and css-loader
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|gif)$/, // Matches image files
         use: [
           {
-            loader: 'file-loader',
+            loader: 'file-loader', // Loads the image files
             options: {
-              name: '[name].[ext]',
-              outputPath: 'images',
+              name: '[name].[ext]', // Keeps original file names
+              outputPath: 'images/', // Output directory for images
+            },
+          },
+          {
+            loader: 'image-webpack-loader', // Optimizes image files
+            options: {
+              mozjpeg: {
+                progressive: true,
+              },
+              optipng: {
+                enabled: true,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75,
+              },
             },
           },
         ],
       },
     ],
   },
-  performance: {
-    maxAssetSize: 500000,
+  resolve: {
+    alias: {
+      jquery: 'jquery/src/jquery',
+    },
   },
-};
-plugins: [
-    new HtmlWebpackPlugin({
-      template: './task_1/index.html',
-    }),
+  plugins: [
+    // Add any plugins here if needed
   ],
   optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
+    minimize: true, // Minimizes the output bundle
   },
 };
