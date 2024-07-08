@@ -4,21 +4,16 @@
   text-align: center;
   margin: auto;
   width: 80%;
-  max-width: 1200px; /* Adjust the max-width as needed */
+  max-width: 1200px; 
 }
 
 .App-header {
-  background-color: #282c34; /* Example background color */
+  background-color: white;
   padding: 20px;
-  color: white;
+  color: pink;
 }
 
 .App-body {
-  margin-top: 20px;
-}
-
-.App-footer {
-  background-color: #282c34; /* Same as header background for consistency */
   padding: 10px;
   color: white;
   position: fixed;
@@ -37,7 +32,7 @@
 .App-header {
   background-color: #282c34; /* Example background color */
   padding: 20px;
-  color: white;
+  color: pink;
 }
 
 .App-body {
@@ -47,7 +42,7 @@
 .App-footer {
   background-color: #282c34; /* Same as header background for consistency */
   padding: 10px;
-  color: white;
+  color: pink;
   position: fixed;
   bottom: 0;
   width: 100%;
