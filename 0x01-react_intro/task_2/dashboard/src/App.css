@@ -1,0 +1,32 @@
+/* App.css */
+
+.App {
+  font-family: Arial, Helvetica, sans-sariff; 
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #c1384c;
+  color: #c1384c;
+  
+}
+
+.App-body {
+  padding: 50px;
+  font-size: 1rem;
+  }
+
+.App-footer {
+  border-top: 3px solid #c1384c; 
+  font-style: italic;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.App-logo {
+  width: 200px;
+  height: auto;
+}
