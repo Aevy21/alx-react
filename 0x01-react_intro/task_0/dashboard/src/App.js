@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="holberton-logo.png" alt="Holberton Logo" /> 
+        <img src="holberton_logo.jpg alt="Holberton Logo" /> 
         <h1>School dashboard</h1>
       </header>
       <div className="App-body">
