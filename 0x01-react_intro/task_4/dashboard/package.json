@@ -1,18 +1,16 @@
 {
   "name": "dashboard",
   "version": "0.1.0",
+  "homepage": "https://Aevy21.github.io/alx-react/",
   "private": true,
-  "homepage": " https://Aevy21.github.io/alx-react",
   "dependencies": {
+    "@cfaester/enzyme-adapter-react-18": "^0.8.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.8",
-    "enzyme-to-json": "^3.6.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -21,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postdeploy": "echo 'Deployment complete!'"
   },
   "eslintConfig": {
     "extends": [
