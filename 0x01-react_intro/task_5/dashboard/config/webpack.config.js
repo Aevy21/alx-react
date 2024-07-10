@@ -4,39 +4,49 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // Ensures the dist folder is cleaned before each build
+    filename: 'bundle.js'
   },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'image-webpack-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-            },
-          },
-        ],
-      },
-    ],
+              bypassOnDebug: true,
+              disable: true
+            }
+          }
+        ]
+      }
+    ]
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+    hot: true
+  },
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-    }),
+      filename: 'index.html'
+    })
   ],
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-    hot: true,
-  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 };
 
