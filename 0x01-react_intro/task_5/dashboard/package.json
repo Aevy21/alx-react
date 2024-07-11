@@ -20,7 +20,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "postdeploy": "echo 'Deployment complete!'"
+    "postdeploy": "echo 'Deployment complete!'",
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js",
+    "test": "jest"
+    
   },
   "eslintConfig": {
     "extends": [
