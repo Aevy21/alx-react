@@ -36,6 +36,7 @@ Immutable.js is a library that provides immutable data structures, such as `List
 ## When to Use Immutable.js
 
 You should consider using Immutable.js when:
+
 - You need to manage complex application state.
 - You want to ensure data consistency and avoid side effects.
 - You are working with large datasets and require efficient data handling.
@@ -44,6 +45,7 @@ You should consider using Immutable.js when:
 ## Where to Use Immutable.js
 
 Immutable.js can be used in any JavaScript environment, including:
+
 - Client-side applications (e.g., React, Angular)
 - Server-side applications (e.g., Node.js)
 - Mobile applications (e.g., React Native)
@@ -51,6 +53,7 @@ Immutable.js can be used in any JavaScript environment, including:
 ## Why Use Immutable.js
 
 Immutable.js offers several benefits:
+
 - **Predictability**: Immutable data structures ensure that state remains consistent, which can help prevent bugs.
 - **Performance**: Efficient data handling and optimization, especially with large datasets.
 - **Debugging**: Easier to track and debug changes in state.
@@ -112,7 +115,7 @@ A `Seq` is a lazy sequence that evaluates its values only when necessary.
 const { Seq } = require('immutable');
 
 const seq = Seq([1, 2, 3, 4]);
-const filteredSeq = seq.filter(x => x > 2);
+const filteredSeq = seq.filter((x) => x > 2);
 console.log(filteredSeq.toArray()); // [3, 4]
 ```
 
