@@ -1,15 +1,11 @@
-const { fromJS } = require('immutable');
+// Import Immutable.js
+import { Map } from 'immutable';
 
+// The function to convert object to Immutable Map
 function getImmutableObject(object) {
-    const immutableMap = fromJS(object);
-
-    immutableMap.customMap = function(mapperFn) {
-        return this.map(mapperFn);
-    };
-
+    // Convert object to Immutable Map
+    const immutableMap = Map(object);
     return immutableMap;
 }
 
-module.exports = {
-    getImmutableObject
-};
+export default getImmutableObject;
