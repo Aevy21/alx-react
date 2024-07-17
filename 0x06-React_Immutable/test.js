@@ -1,5 +1,5 @@
 // Import the function from 0-fromjs.js
-const { getImmutableObject } = require('./1-map');
+const { getImmutableObject } = require('./fromJS');
 
 // Test data object
 const testData = {
