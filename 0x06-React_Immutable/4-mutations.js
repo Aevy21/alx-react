@@ -17,4 +17,4 @@ const map2 = map.withMutations(mutableMap => {
 });
 
 // Export map and map2
-export default{ map, map2 };
+export { map, map2 };
