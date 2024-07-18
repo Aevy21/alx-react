@@ -1,22 +1,16 @@
 import { List, Map } from 'immutable';
 
-// Function to concatenate elements of two arrays into a List
+// Function to concatenate two arrays and return a List
 function concatElements(page1, page2) {
-  // Concatenate arrays and convert to Immutable List
-  return List(page1.concat(page2));
+  return List(page1).concat(List(page2));
 }
 
-// Function to merge elements of two objects into a List
+// Function to merge two objects and return a List
 function mergeElements(page1, page2) {
-  // Merge objects, giving priority to page2 values
-  const mergedObject = { ...page1, ...page2 };
-
-  // Convert merged object values to Immutable List
-  return List(Map(mergedObject).values());
+  const map1 = Map(page1);
+  const map2 = Map(page2);
+  const mergedMap = map1.merge(map2);
+  return List(mergedMap.values());
 }
 
-// Exporting as default export
-export default {
-  concatElements,
-  mergeElements,
-};
+export { concatElements, mergeElements };
