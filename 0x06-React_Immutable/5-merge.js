@@ -13,4 +13,4 @@ function mergeElements(page1, page2) {
   return List(mergedMap.values());
 }
 
-export { concatElements, mergeElements };
+export default { concatElements, mergeElements };
