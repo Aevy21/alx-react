@@ -1,6 +1,5 @@
 import { Map } from 'immutable';
 
-// Create an Immutable Map named map
 const map = Map({
   1: 'Liam',
   2: 'Noah',
@@ -10,10 +9,8 @@ const map = Map({
   6: 'Lucas'
 });
 
-// Modify the values for index 2 and index 4 in map to 'Benjamin' and 'Oliver', respectively
-const map2 = map.set(2, 'Benjamin').set(4, 'Oliver');
+const map2 = map
+  .set(2, 'Benjamin')
+  .set(4, 'Oliver');
 
-export default {
-  map,
-  map2
-};
+export { map, map2 };
