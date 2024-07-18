@@ -9,8 +9,8 @@ const map = Map({
   6: 'Lucas'
 });
 
-const map2 = map
+export const map2 = map
   .set(2, 'Benjamin')
   .set(4, 'Oliver');
-
-export { map, map2 };
+  
+export { map };
