@@ -1,4 +1,4 @@
-import { fromJS, Seq } from 'immutable';
+import { fromJS } from 'immutable';
 
 // Function to capitalize the first letter of a string
 function capitalize(str) {

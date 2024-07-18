@@ -1,4 +1,4 @@
-import { Map, is } from 'immutable';
+import { is } from 'immutable';
 
 // Function to compare two Immutable Maps
 function areMapsEqual(map1, map2) {
