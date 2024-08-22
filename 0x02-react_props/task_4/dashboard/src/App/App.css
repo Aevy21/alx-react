@@ -1,0 +1,15 @@
+/* src/App.css */
+
+.App {
+  font-family: Arial, Helvetica, sans-sariff;
+}
+
+.App-body {
+  padding: 50px;
+  font-size: 1rem;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
